@@ -1,0 +1,78 @@
+.error {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  background: #F3F3F3;
+}
+
+.error .message-box h1 {
+  font-size: 3rem;
+}
+
+.error .message-box p {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+@media (min-width: 680px) {
+  .error {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+#Polygon-1,
+#Polygon-2,
+#Polygon-3,
+#Polygon-4,
+#Polygon-4,
+#Polygon-5 {
+  -webkit-animation: float 1s infinite ease-in-out alternate;
+          animation: float 1s infinite ease-in-out alternate;
+}
+
+#Polygon-2 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+#Polygon-3 {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+#Polygon-4 {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+#Polygon-5 {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+@-webkit-keyframes float {
+  100% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+}
+
+@keyframes float {
+  100% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+}

@@ -1,0 +1,47 @@
+@import "../../main.scss";
+
+.openMenu {
+    position: absolute;
+    z-index: 5;
+    right: -30rem;
+    transition: .15s ease-in-out;
+    & ul {
+        list-style: none;
+        font-size: 1.5rem;
+        position: absolute;
+        right: 5rem;
+        bottom: 7rem;
+        display: flex;
+        flex-direction: column;
+        height: 14rem;
+        justify-content: space-between;
+        color: $fontColor;
+        font-weight: bold;
+        letter-spacing: 1px;
+        padding-left: 4rem;
+        & a {
+            color: $fontColor;
+            font-size: 1rem;
+            text-decoration: none;
+        }
+    }
+    & button {
+        border: none;
+        background: #0B3C0A;
+        color: $fontColor;
+        font-size: 1.3rem;
+        border-radius: 5rem;
+        width: 6rem;
+        height: 3rem;
+        cursor: pointer;
+        transition: .25s ease-in-out;
+    &:hover {
+        transform: scale(1.1) translateY(-5px);
+        color:#0B3C0A;
+        background: $fontColor;
+    }
+    }
+}
+.active {
+    right: -3rem !important;
+}

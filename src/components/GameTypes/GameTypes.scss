@@ -1,0 +1,16 @@
+.gameTypes {
+    width: 100%;
+    margin-top: 13rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 100vh;
+    gap: 12rem;
+}
+@media (min-width: 1240px){
+    .gameTypes {
+      flex-direction: row;
+      margin-top: 0;
+    }
+  }

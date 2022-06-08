@@ -1,0 +1,28 @@
+.startScreen {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    &::after {
+        content: "";
+        position: absolute;
+        width: 250rem;
+        height: 100rem;
+        background: #88DF86;
+        transform: rotate(-25.3deg) translateY(50rem);
+        z-index: -2;
+    }
+    h1 {
+        position: absolute;
+        color: #88DF86;
+        font-weight: bold;
+        mix-blend-mode: color-dodge;
+        font-size: 2rem;
+    }
+
+}

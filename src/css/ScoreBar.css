@@ -1,0 +1,35 @@
+.scoreBar {
+  background-color: #F3F3F3;
+  border: 2px solid #E5E5E5;
+  border-radius: 3rem;
+  position: relative;
+  margin: 15px 0;
+  height: 3rem;
+  width: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.scoreBar .scoreBar-done {
+  background: #88df86;
+  border-radius: 20px;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  width: 0;
+  opacity: 0;
+  -webkit-transition: .25s ease;
+  transition: .25s ease;
+  font-weight: bold;
+  font-size: 1.2rem;
+  -webkit-transition: 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}

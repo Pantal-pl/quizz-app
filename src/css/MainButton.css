@@ -1,0 +1,30 @@
+.mainButton {
+  position: relative;
+  border: none;
+  background: transparent;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 2rem;
+}
+
+.green {
+  color: #f2f2f2;
+}
+
+.white {
+  color: #88df86;
+}
+
+.mainButtonSvgs {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.mainButtonSvgs:hover {
+  -webkit-transform: translate(-50%, -50%) scale(1.2);
+          transform: translate(-50%, -50%) scale(1.2);
+}

@@ -1,0 +1,91 @@
+@import "../../main.scss";
+
+.resultScreen {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 1rem;
+    & h1 {
+        color: $primaryColor;
+        font-weight: bold;
+        letter-spacing: 1px;
+        font-size: 2.5rem;
+        text-align: center;
+    }
+    & label {
+        & p {
+            margin-left: 1rem;
+            border-bottom: 2px solid $primaryColor;
+            width: fit-content;
+            padding: 0 8px;
+            color: $primaryColor;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+    }
+    & .buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 6rem;
+        margin-top: 6.5rem;
+        margin-bottom: 2rem;
+    }
+    & .answers {
+        display: grid;
+        grid-template-rows: repeat(6,1fr);
+        margin-top: 1rem;
+        & .answer {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid hsla(0, 0%, 0%, 0.095);
+            & .questionName {
+                color: $primaryColor;
+                font-weight: bold;
+                font-size: 1.3rem;
+                border-left: 2px solid $primaryColor;
+                padding-left: 5px;
+                text-align: left;
+                flex: 1;
+                &::first-letter {
+                    text-transform: uppercase;
+                }
+            }
+            & .questionResult {
+                text-align: center;
+                flex: 1;
+                & svg {
+                    transform: scale(1.4);
+                }
+            }
+            & .correctAnswer {
+                text-align: right;
+                flex: 1;
+                font-size: 1.3rem;
+                font-weight: bold;
+            }
+        }
+        & .headings {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            & h2 {
+                color: $primaryColor;
+                flex: 1;
+                text-align: center;
+            }
+            & h2:first-child {
+                text-align: left;
+            }
+            & h2:last-child {
+                text-align: right;
+            }
+
+        }
+    }
+}

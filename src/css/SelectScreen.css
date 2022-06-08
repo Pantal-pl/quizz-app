@@ -1,0 +1,79 @@
+.selectScreen {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  isolation: isolate;
+}
+
+.selectScreen h1 {
+  font-size: 2.6rem;
+  color: #88df86;
+  font-weight: bold;
+  text-align: center;
+}
+
+.selectScreen label p {
+  border-bottom: 2px solid #88df86;
+  padding: 0 8px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: 1.8rem;
+  color: #88df86;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.selectScreen label p::first-letter {
+  text-transform: uppercase;
+}
+
+.selectScreen label select {
+  -webkit-appearance: none;
+  width: 95vw;
+  border: 2px solid #E5E5E5;
+  background: #F3F3F3;
+  padding: 2rem 1rem;
+  border-radius: 5rem;
+  margin-bottom: 3.5rem;
+  color: black;
+}
+
+.selectScreen label select::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.199);
+}
+
+.selectScreen label select:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.199);
+}
+
+.selectScreen label select::-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.199);
+}
+
+.selectScreen label select::placeholder {
+  color: rgba(0, 0, 0, 0.199);
+}
+
+.selectScreen button {
+  border: none;
+  color: #F3F3F3;
+  background: #88df86;
+  padding: 1rem 4rem;
+  width: 15rem;
+  border-radius: 5rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  cursor: pointer;
+}

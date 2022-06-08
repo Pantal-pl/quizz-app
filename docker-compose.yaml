@@ -1,0 +1,35 @@
+version: '3.6'
+services:
+  postgres:
+    image: postgres:12
+    restart: always
+    volumes:
+    - db_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: postgrespassword
+  graphql-engine:
+    image: hasura/graphql-engine:v2.7.0
+    ports:
+      - "8080:8080"
+    # extra_hosts:
+    # - "host.docker.internal:host-gateway"
+    depends_on:
+      - "postgres"
+    restart: always
+    environment:
+      HASURA_GRAPHQL_METADATA_DATABASE_URL: postgres://postgres:postgrespassword@postgres:5432/postgres
+      ## enable the console served by server
+      HASURA_GRAPHQL_ENABLE_CONSOLE: "true" # set to "false" to disable console
+      ## enable debugging mode. It is recommended to disable this in production
+      HASURA_GRAPHQL_DEV_MODE: "true"
+      HASURA_GRAPHQL_ENABLED_LOG_TYPES: startup, http-log, webhook-log, websocket-log, query-log
+      ## uncomment next line to set an admin secret
+      HASURA_GRAPHQL_ADMIN_SECRET: myadminsecretkey
+      HASURA_GRAPHQL_ENABLE_REMOTE_SCHEMA_PERMISSIONS: "true"
+      ALLOWED_SKEW: "3600"
+      TZ: "Europe/Warsaw"
+      HASURA_GRAPHQL_JWT_SECRET: '{"type": "RS256", "key": "-----BEGIN CERTIFICATE-----\nMIIDDTCCAfWgAwIBAgIJBPKPJAQlfq3XMA0GCSqGSIb3DQEBCwUAMCQxIjAgBgNV\nBAMTGWRldi1uNWhoODM0ai51cy5hdXRoMC5jb20wHhcNMjIwNTA2MjEyNTI2WhcN\nMzYwMTEzMjEyNTI2WjAkMSIwIAYDVQQDExlkZXYtbjVoaDgzNGoudXMuYXV0aDAu\nY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyqKbsrQiT8W73cD1\ngDobMee+aafKkxycUhZOfWGSjXrGlm59tV71iuX22IoMToFI4HSowMPiB2E7Z8H3\nuBnPsnrHWWK7/jX8f10fn1HzeEnvXSl6AJ15j/evP/mKHD0Zg68EztzjHJtQNM5C\ncObZqFcwHezgk5K5RhMU5lemRyyNiSRF38FS4ED1Lek3iNv8aokHl4QXy1V3QNWy\n7eLK7cx9MKmtktBOczQt4+5jtx72zvr0CZ8psvahqzXi0dsRhmb4Rh56GttXDm09\nD/MdOOMes+Js22oRe3bhDml9Zo6RkH6aYrJyICHnyMNiAZiIMbwGeS4Fb8zqEaB4\nKapToQIDAQABo0IwQDAPBgNVHRMBAf8EBTADAQH/MB0GA1UdDgQWBBQPn3cSazNR\nIljLol34X2JvPjhFsjAOBgNVHQ8BAf8EBAMCAoQwDQYJKoZIhvcNAQELBQADggEB\nAHvwsIY70P1PnOzZxDJpAgl2jZ/f2w128yOF5lUbu2ioJv77O8Tz3CkKMAavKJ8Q\nL3VN09yxxaz+cUMXZyl+cN7BQ1Ho+c8B7InAwzQcEBUOgLGyLdkPjXtZAkQJhrfj\nAYA+GLsd+mi4pq8i6/7RRMHTuCQbMgAVR1YAWNOYe7vzumDQvNd6Y5Yp2jAEBG/k\nBQo2LfZGpHSuIAnu9VrQHoFXfpQ+jToSEMpdSh+YNslVCwNw6pjnWEdMjWWpJNXF\nc0mqX6AczcPNJJvGFd33YI9nkjuSJCsXKUWNWqbB78JwZkb7R9HsCPHEqpdT8GBC\nRNwA93AAM9CufQ9e6JMffDo=\n-----END CERTIFICATE-----"}'
+      
+volumes:
+  db_data:
+

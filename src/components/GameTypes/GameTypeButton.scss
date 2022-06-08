@@ -1,0 +1,26 @@
+@import "../../main.scss";
+
+.gameTypeButton {
+    border: none;
+    background: transparent;
+    position: relative;
+    color: $fontColor;
+    font-size: 2rem;
+    cursor: pointer;
+    & p{
+        z-index: 1444 !important;
+        width: 20rem;
+        height: 5rem;
+        margin: 0;
+        display: grid;
+        place-items: center;
+    }
+}
+.svgs {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+    cursor: pointer;
+}
