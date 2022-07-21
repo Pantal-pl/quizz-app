@@ -37,7 +37,6 @@
 
 ## **Resources**
 
-- API from [https://spoonacular.com/food-api](https://countries.trevorblades.com/)
 - ICONS from https://www.svgrepo.com
 - Designe prototype on figma https://www.figma.com/@Pantal
 
