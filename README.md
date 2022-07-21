@@ -38,7 +38,7 @@
 ## **Resources**
 
 - ICONS from https://www.svgrepo.com
-- Designe prototype on figma https://www.figma.com/@Pantal
+- Design prototype on figma https://www.figma.com/@Pantal
 
 
 ## **Review**
