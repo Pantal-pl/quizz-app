@@ -54,5 +54,3 @@
 
 https://user-images.githubusercontent.com/61602042/172718519-3c4320fe-c876-46fd-b0ba-05ddf3200801.mp4
 
-
-https://rsstudio.netlify.app/
