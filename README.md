@@ -1,5 +1,4 @@
 # Quizz App
-[![Netlify Status](https://api.netlify.com/api/v1/badges/a673c841-a692-4b31-8d20-23e493839f4d/deploy-status)](https://app.netlify.com/sites/rsstudio/deploys)
 
 # **Stack:**
 
